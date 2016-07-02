@@ -17,8 +17,7 @@ defaults.loaders.addLoaders({
 module.exports  = Object.assign({},base,{
 	entry : [
 		'babel-polyfill',
-		`webpack-dev-server/client?http://${defaults.host}:${defaults.port}`,
-    'webpack/hot/only-dev-server',
+    `webpack-hot-middleware/client?path=http://${defaults.host}:${defaults.port}/__webpack_hmr&overlay=false`,
 		path.join(defaults.srcPath,'./index.js')
 	],
 	cache : false,

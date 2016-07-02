@@ -10,12 +10,12 @@ function loaders(options) {
 	//var cssLoader = options.minimize ? 'css-loader?module' | 'css-loader?module&localIdentName=[path][name]---[local]---[hash:base64:5]'
 	this.common = {
 		preLoaders: [
-		      {
+		      /*{
 		        test: /\.(js|jsx)$/,
 		        include: srcPath,
             exclude: path.join(basePath,'./node_modules'),
 		        loader: 'eslint-loader'
-		      }
+		      }*/
 		    ],
 	    loaders: [
 			{

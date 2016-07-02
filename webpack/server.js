@@ -22,23 +22,22 @@ const serverOptions =  {
 
 const app = new Express()
 
-app.use(require('webpack-dev-middleware')(compiler, serverOptions));
-app.use(require('webpack-hot-middleware')(compiler,{
-  log: console.log,
-  path: '/__webpack_hmr',
-  heartbeat: 10 * 1000
-}))
+app.use(require('webpack-dev-middleware')(compiler, serverOptions))
+app.use(require('webpack-hot-middleware')(compiler))
 
 app.get('*',(req,res) => {
-  res.sendFile(path.join(defaultConfig.srcPath, 'index.html'));
+  res.set('Content-Type','text/html')
+  res.sendFile(path.join(defaultConfig.srcPath, 'index.html'))
 })
 
 app.listen(defaultConfig.port,defaultConfig.host, function onAppListening(err) {
   if (err) {
     console.error(`❌\n${err}`)
   } else {
-    console.info(`==> 🚧🎉Webpack development server listening on ${defaultConfig.host}:${defaultConfig.port} `)
+    console.info(`==> 🚧 Webpack development server listening on ${defaultConfig.host}:${defaultConfig.port} `)
   }
 })
+
+
 
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { render } from 'react-dom'
-const DemoComponent = () => <h1> This is a demo React Component </h1>
+import DemoComponent from './demoComponent.js'
+
 
 render(<DemoComponent />, document.getElementById('container'))
