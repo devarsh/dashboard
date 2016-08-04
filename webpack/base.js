@@ -11,6 +11,7 @@ module.exports = {
    		consts    : path.join(defaultConfig.srcPath,'./consts'),
     	reducer   : path.join(defaultConfig.srcPath,'./reducer'),
     	utils     : path.join(defaultConfig.srcPath,'./utils'),
+      statics   : path.join(defaultConfig.basePath,'./statics'),
     },
     modulesDirectories: ["src", "node_modules"]
 	},

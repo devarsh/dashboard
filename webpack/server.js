@@ -34,7 +34,7 @@ app.listen(defaultConfig.port,defaultConfig.host, function onAppListening(err) {
   if (err) {
     console.error(`❌\n${err}`)
   } else {
-    console.info(`==> 🚧 Webpack development server listening on ${defaultConfig.host}:${defaultConfig.port} `)
+    console.info(`==> 🌎 Webpack development server listening on ${defaultConfig.host}:${defaultConfig.port} `)
   }
 })
 

@@ -1,10 +1,10 @@
 var path = require('path')
 var host = 'localhost'
-var port = '8080'
+var port = '8000'
 var basePath = path.join(__dirname,'..')
 var srcPath = path.join(__dirname,'../src')
 var outputPath = path.join(__dirname,'../statics/dist')
-var publicPath = 'http://localhost:8080/assets/'
+var publicPath = `http://${host}:${port}/assets/`
 
 function loaders(options) {
 	//var cssLoader = options.minimize ? 'css-loader?module' | 'css-loader?module&localIdentName=[path][name]---[local]---[hash:base64:5]'

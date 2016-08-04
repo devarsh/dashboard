@@ -1,0 +1,6 @@
+export const ADD_TODO = 'redux/ADD_TODO'
+export const REMOVE_TODO = 'redux/REMOVE_TODO'
+export const TOGGLE_TODO = 'redux/TOGGLE_TODO'
+export const SHOW_COMPLETED = 'redux/SHOW_COMPLETED'
+export const SHOW_ALL = 'redux/SHOW_ALL'
+export const SHOW_INCOMPLETE = 'redux/SHOW_INCOMPLETE'
