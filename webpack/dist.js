@@ -15,7 +15,8 @@ defaults.loaders.addLoaders({
 })
 
 module.exports  = Object.assign({},base,{
-	entry : path.join(defaults.srcPath,'./index.js')
+	entry : path.join(defaults.srcPath,'./index.js'),
+  target : defaults.target,
 	cache : false,
 	devtool: 'sourcemap',
 	module : defaults.loaders.getLoaders(),

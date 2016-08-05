@@ -20,7 +20,7 @@ const toggleTodo = (value,id) => {
 }
 
 
-export const todosReducer = (state = {}, action) => {
+export const todosReducer = (state = [], action) => {
   const behavior = behaviors[ action.type ]
   return behavior ? behavior(state, action) : state
 }

@@ -1,4 +1,11 @@
 {
-  "presets": ["react", "es2015", "stage-0"],
-
+  "presets": ["es2015", "react", "stage-2"],
+  "env": {
+    "test" : {
+      "plugins": [
+        [ "babel-plugin-webpack-alias", { "config": "./webpack/dev.js" } ],
+        ["transform-class-properties"],
+      ],
+    }
+  }
 }

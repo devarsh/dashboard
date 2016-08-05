@@ -5,6 +5,7 @@ var basePath = path.join(__dirname,'..')
 var srcPath = path.join(__dirname,'../src')
 var outputPath = path.join(__dirname,'../statics/dist')
 var publicPath = `http://${host}:${port}/assets/`
+var target = 'node'
 
 function loaders(options) {
 	//var cssLoader = options.minimize ? 'css-loader?module' | 'css-loader?module&localIdentName=[path][name]---[local]---[hash:base64:5]'
@@ -134,5 +135,6 @@ module.exports = {
 	basePath,
 	outputPath,
 	publicPath,
+  target,
 	loaders : new loaders()
 }
