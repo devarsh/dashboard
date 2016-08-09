@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node webpack/server.js ",
-    "clean": "rimraf statics/dist lib",
-    "build:lib": "npm run clean && NODE_ENV=test babel src --out-dir lib",
-    "test": "mocha --compilers js:babel-register --recursive 'lib/__test__/*'",
-    "test:lib" : "npm run build:lib && mocha --compilers js:babel-register --recursive 'lib/__test__/*'",
-    "test:coverage" : "istanbul cover _mocha --recursive 'lib/__test__/*'  "
+    "clean": "rimraf statics/dist lib coverage",
+    "build:lib": "npm run clean && NODE_ENV=test babel src --out-dir lib --source-maps inline",
+    "test": "mocha --compilers js:babel-register --recursive 'lib/__test__/*' --require source-map-support/register",
+    "test:lib": "npm run build:lib && npm run test",
+    "test:coverage": "istanbul cover _mocha --recursive 'lib/__test__/*' --require source-map-support/register",
+    "show:coverage": "open coverage/lcov-report/index.html"
   },
   "keywords": [
     "dashboard"
@@ -53,6 +54,7 @@
     "reselect": "^2.5.3",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
+    "source-map-support": "^0.4.2",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
